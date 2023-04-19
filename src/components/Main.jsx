@@ -50,7 +50,7 @@ function Main({onEditProfile, onAddPlace, onEditAvatar, onCardClick}) {
                 onClick={onEditProfile}
                 className='profile__edit-button opacity'
                 aria-label='редактирование профиля'
-                type='button'></button>
+                type='button' />
             </div>
             <p className='profile__about-me'>{userDescription}</p>
           </div>
