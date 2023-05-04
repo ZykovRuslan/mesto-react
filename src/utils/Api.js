@@ -50,6 +50,13 @@ class Api {
     return this._fetch(`/cards/likes/${id}`, 'DELETE');
   }
 
+  changeLikeCardStatus(id, hasLike) {
+    if (!hasLike) {
+      return api.likeCard(id);
+    }
+    return api.dislikeCard(id);
+  }
+
   deleteCard(id) {
     return this._fetch(`/cards/${id}`, 'DELETE');
   }
