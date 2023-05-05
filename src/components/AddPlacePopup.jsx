@@ -5,6 +5,11 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
   const [name, setName] = React.useState('');
   const [link, setLink] = React.useState('');
 
+  React.useEffect(() => {
+    setName('');
+    setLink('');
+  }, [isOpen]);
+
   function handleNameChange(evt) {
     setName(evt.target.value);
   }
@@ -28,6 +33,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}
+      buttonText={'Добавить'}
       children={
         <>
           <label className='popup__field'>
@@ -41,6 +47,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
               minLength='2'
               maxLength='30'
               onChange={handleNameChange}
+              value={name}
             />
             <span className='popup__input-error title-input-error'></span>
           </label>
@@ -53,6 +60,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
               name='input-photo'
               id='url-input'
               onChange={handleLinkChange}
+              value={link}
             />
             <span className='popup__input-error url-input-error'></span>
           </label>

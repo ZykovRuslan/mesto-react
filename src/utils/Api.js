@@ -21,9 +21,7 @@ class Api {
       method,
       headers: this._headers,
       body,
-    })
-      .then(this._checkResponse)
-      .catch((err) => console.log(err));
+    }).then(this._checkResponse);
   }
 
   getUserInfo() {
