@@ -15,13 +15,12 @@
 
 ✅ <b>БЭМ (Nested)</b>.<br>
 
-**GitHub Pages**
+
+## **GitHub Pages**
 
 - [Ссылка на cайт](https://zykovruslan.github.io/mesto-react/)
 
 ---
-
-Для связи
 
 ## Для связи
   <a href="https://linkedin.com/in/ruslan-zykov/">
